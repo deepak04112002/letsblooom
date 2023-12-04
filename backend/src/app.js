@@ -26,6 +26,9 @@ app.use(
 )
 
 app.use("/v1", apiV1)
+app.get('/',(req,res)=>{
+  res.json("hello")
+})
 
 app.use((req, res) => {
   return res.status(404).json({ error: "Route not found" })
